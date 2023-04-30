@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>검색 결과</title>
+  </head>
+  <body>
+    {% if row %}
+      <h1>{{ row[3] }} 학생 정보</h1>
+      <ul>
+        <li>부산행 KTX(5월 2일): {{ row[4] }}</li>
+        <li>수원행 KTX(5월 3일): {{ row[5] }}</li>
+        <li>첫날 숙소(5월 2일): {{ row[6] }}</li>
+        <li>둘째날 숙소(5월 3일): {{ row[7] }}</li>
+      </ul>
+    {% else %}
+      <h1>해당 학생 정보를 찾을 수 없습니다.</h1>
+    {% endif %}
+    <p><a href="/">다시 검색하기</a></p>
+  </body>
+</html>
